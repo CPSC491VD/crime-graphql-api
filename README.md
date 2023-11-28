@@ -4,9 +4,9 @@
 
 ```javascript
 {
-    crime(id: "123456") {
-		crime_description
-	}
+  crime(id: "123456") {
+    crime_description
+  }
 }
 ```
 
@@ -14,8 +14,8 @@
 
 ```javascript
 {
-    case(case_number: "JG497606") {
-		crime_description
-	}
+  case(case_number: "JG497606") {
+    crime_description
+  }
 }
 ```
