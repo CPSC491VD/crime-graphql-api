@@ -25,6 +25,8 @@ const pool = new Pool({
     port: 5432
 })
 
+const URL = process.env.DEV ? "http://localhost:5000/graphql" : "https://crime-graphql-api.vercel.app/graphql"
+
 // GraphQL type
 const CrimeDataType = new GraphQLObjectType({
     name: 'CrimeData',
@@ -102,7 +104,7 @@ app.get('/crimes', async (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.status(200).send("<h2>Welcome to Graphql")
+    res.status(200).send(`<h2>Welcome to Graphql</h2><a href=${URL}>GraphQL UI</a>`)
 })
 
 
