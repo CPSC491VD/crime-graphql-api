@@ -49,10 +49,12 @@ const CrimeDataType = new GraphQLObjectType({
 // Query Resolver
 const RootQueryType = new GraphQLObjectType({
     name: 'Query',
+    description: 'Root Query',
     fields: {
         // Query by id
         crime: {
             type: CrimeDataType,
+            description: 'Query a Crime by id. Argument id',
             args: {
                 id: { type: GraphQLString }
             },
@@ -65,6 +67,7 @@ const RootQueryType = new GraphQLObjectType({
         // Query by case number
         case: {
             type: new GraphQLList(CrimeDataType),
+            description: 'Query A crime by a case number. Pass in a case number as argument',
             args: {
                 case_number: { type: GraphQLString }
             },
@@ -77,6 +80,7 @@ const RootQueryType = new GraphQLObjectType({
         // Query all crimes
         crimes: {
             type: new GraphQLList(CrimeDataType),
+            description: 'Query All crimes data with specific attribute needed',
             resolve: async () => {
                 const result = await pool.query('SELECT * FROM tbl_analytics')
                 return result.rows;
