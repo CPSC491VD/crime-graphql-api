@@ -2,7 +2,7 @@
 A simple GraphQL API to demonstrate what we can do with the crime database.
 
 ## To run the hosted version (recommended)
-Visit this link: [GraphQL API User Interface](crime-graphql-api.vercel.app)
+Visit this link: [GraphQL API User Interface](https://crime-graphql-api.vercel.app/)
 
 ## To run locally
 1. Clone this repo
