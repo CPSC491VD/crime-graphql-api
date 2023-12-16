@@ -4,7 +4,9 @@ A simple GraphQL API to demonstrate what we can do with the crime database.
 ## To run the hosted version (recommended)
 Visit this link: [GraphQL API User Interface](https://crime-graphql-api.vercel.app/)
 
-## To run locally
+## To run locally:
+**Please note:** Running this app locally requires that the user have a .env file in their cloned directory. This file is ignored in the ```.gitignore``` for security reasons due to the fact that it contains credentials for a hosted database. If you wish to get access to this file, contact us directly.
+
 1. Clone this repo
 2. Install dependencies
     ```
